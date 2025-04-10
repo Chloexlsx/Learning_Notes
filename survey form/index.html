@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="title">Princess On Nail Survey Form
+    </h1>
+    <p id="description" class="description">We value your feedback!</p>
+  </header>
+  <form id="survey-form" class="form">
+  <div>
+    <label id="name-label" for="name">Name</label>
+    <input id="name" name="name" class="form-data" type="text" placeholder="Lucy" required></input>
+  </div>
+  <div>
+    <label id="email-label" for="email">Email</label>
+    <input id="email" name="email" class="form-data" type="email" placeholder="Lucyg0g0@gmail.com" required></input>
+  </div>
+  <div>
+    <label id="number-label" for="number">Phone</label>
+    <input id="number" name="phonenumber" class="form-data" type="number" placeholder="041234567" min="9" max="12"></input>
+  </div>
+  <div>
+    <label id="reason" for="dropdown">What do you buy from us?</label>
+    <select id="dropdown" class="dropdown" name="reason">
+    
+<option value="selection">(Select one)</option>      <option value="polygel">polygels</option>
+      <option value="tool">tools</option>    <option value="kit">kits</option>
+    </select>
+  </div>
+  <div>Why do you buy from us?<div>
+  <input name="reason" value="design" type="radio" class="input-radio" checked="">Like the design</input>
+  <br/>
+  <input name="reason" value="easyUse" type="radio" class="input-radio" checked="">Easy to use</input>
+  <br/>
+  <input name="reason" value="price" type="radio" class="input-radio" checked="">Reasonable price</input>
+<div>Any comments or suggestions?</div>
+<textarea id="comment" class="input-textarea" name="comment" placeholder="I really like..."></textarea>
+</form>
+
+<input class="checkbox" id="subscribe" type="checkbox" value="subscribe" name="subscribe" />I would like to receive latest product.
+</label>
+<label for="Agreement">
+  <input class="checkbox" id="Agreement" type="checkbox" value="Agreement" name="Agreement" />I agree to share data with Princess On Nail.
+</label>
+
+<button type="submit" id="submit" class="submitButton">
+  Submit
+</button>
+  
+</div>
+</body>
+</html>
