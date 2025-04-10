@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Chloe_JavaScript practise</title>
+    </head>
+    <body>
+        <script>
+            let stock={
+                price:88.165,
+                amt:7.20199
+            };
+            
+            let proxy = new Proxy(stock, {get:function(target, property)
+                {if (property==="total") {
+                    return stock.price*stock.amt;
+                }else{
+                    return target[property]; //如果是total以外的其他，就按照原來的目標物件做回應
+                }   
+                }
+             })
+            /*建立代理物件
+            let stock={
+                price:88.165,
+                amt:7.20199
+            };
+            console.log(stock.price*stock.amt);
+            let proxy = new Proxy(stock, {
+                get:function(target, property){  //第一個處理函式＝當我們用代理物件想要取得屬性資料的時候會對應到的函式
+                    console.log("代理的目標物件", target);
+                    console.log("想要取得的屬性名稱", property);
+                }
+            });
+            // let rabbit = new Proxy(目標物件,{處理函式的物件get:function(代理標物件傳遞進來的對象, 想取得的屬性名稱){
+                console.log(“代理的目標物件”, target)}
+            } ) */
+           console.log(proxy.total);
+           console.log(proxy.price);
+        </script>
+    </body>
+</html>

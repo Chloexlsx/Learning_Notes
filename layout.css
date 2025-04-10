@@ -1,0 +1,34 @@
+.frame{
+    display:flex; /* 想讓項目水平排列，要寫在容器中 */
+}
+.left{
+    background-color: cornflowerblue;
+    flex:none; /* 固定配置 */ 
+    width:30%/* 寬度 */
+}
+.right{
+    display:flex; /* 想讓項目水平排列，要寫在容器中 */
+    justify-content: flex-end;
+    background-color:gold;
+    flex:auto;
+    width:auto /* 固定配置 */
+    /* 寬度 */
+}
+.item{
+    background-color: burlywood;
+    flex:none;
+    width:20px;
+}
+.welcome{
+    display:flex;
+    background-color: darkkhaki;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+}
+
+.content{
+    font-size: 50px;
+    font-weight:bold;
+    font-family:'Courier New';
+}

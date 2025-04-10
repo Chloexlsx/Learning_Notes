@@ -1,0 +1,53 @@
+/*RWD 應用：在不同裝置上螢幕大小不一樣，頁面呈現需要區分開時，就用RWD的media query另外寫兩三個程式，絕對可以解決問題*/
+
+
+/* 原始設定，桌機螢幕寬度，套用下面的css */
+.desktop-menu{
+    text-align:center;
+    display:block;
+}
+.mobile-menu{
+    text-align: center;
+    display:none;
+}
+.list{
+    display:flex; 
+    justify-content:center;
+
+}
+.product{
+    flex:none; width:280px; margin:10px;
+    background-color:rgb(179, 137, 218);
+}
+.headline{
+    font-size: 30px; font-weight: bold; margin-bottom: 15px; text-align:center;
+}
+/* 平板＿螢幕寬度小於1250px，套用下面的css */
+@media (max-width:1250px){
+    .list{
+        flex-wrap: wrap;
+    }
+    .product{
+        width:45%;
+    }
+    .headline{
+        font-size: 20px;
+    }
+}
+
+/* 手機＿螢幕寬度小於500px ~ 360px，套用下面的css */
+@media (max-width:500px){
+    .product{
+        width:90%;
+    }
+    .headline{
+        font-size: 15px;
+    }
+    .desktop-menu{
+        text-align:center;
+        display:none;
+    }
+    .mobile-menu{
+        text-align: center;
+        display:block;
+}

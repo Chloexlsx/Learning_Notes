@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>滑鼠 practise</title>
+        <style>
+            .btn{
+                background-color: crimson;
+                padding:7px;
+                font-weight: 150;
+                border-radius: 10px;
+                cursor:grab;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>點滑鼠的事件處理練習</h1>
+        <button
+            onclick="console.log('喵')"
+            onmouseover="console.log('Mewo');"
+            onmouseout="console.log('zZZ');"
+            onmousedown="console.log('按下滑鼠');"
+            onmouseup="consoke.log('放開滑鼠');">
+        貓咪
+        </button>
+        <span 
+            class="btn";
+            onmouseover="over(this)"; onmouseout="out(this)";
+            onmousedown="down(this)"; onmouseup="up(this)";
+        >吃罐罐</span>
+        <script>
+            function over(elemA){
+                elemA.style.backgroundColor="#ffcccc"; 
+            }
+            function out(elemA){
+                elemA.style.backgroundColor="crimson";
+            }
+            function up(elemA){
+                elemA.style.fontWeight="normal";
+            }
+            function down(elemA){
+                elemA.style.fontWeight="bold";
+            }
+        </script>
+    </body>
+
+</html>

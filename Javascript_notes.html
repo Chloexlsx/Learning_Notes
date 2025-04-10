@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Chloe_JavaScript practise</title>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
+    </head>
+    <body>
+    
+        <script>
+        //datatype
+        //variables, let, constant
+        //The Assignment Operator =, The Addition Operator +, The Multiplication Operator * & The Comparison Operator >; comparison; 單元運算
+        //If, else if,...., else
+
+        /* Example:
+        let money=prompt("要領多少錢？",'');
+        if(money<=100){
+            console.log("太少了，要大於100元");
+        }else if(money<=10000){
+            console.log('請取錢');
+        }else{
+            console.log('已超過提領上限，請提高提領門檻')
+        }
+
+        console.log('結束');
+        */
+
+        //Loop- While loop & For loop, 設一個變數控制迴圈數，避免出現無止盡迴圈！
+
+        /*
+        let n=0
+        while(n<3){
+            console.log(n);
+            n++;
+        }
+
+        for(let n=0; n<3; n++){
+            console.log(n);
+        }
+        
+        let n=1
+        result=0
+        while (n<=10){
+            result=result+n;
+            n++;
+        }    
+        console.log(result);
+        */
+
+        //statement 迴圈指令（只能寫在迴圈裡）break & continue->強迫跳到回圈開頭，剩餘程式不執行，進入一開始執行下一圈
+
+        /*
+        let n=0
+        while (n<=10){
+            if (n==7){
+               break; 
+            }console.log(n);
+            n++;
+        }
+        */
+       /*
+       for (n=0;n<=10;n++){
+        if (n%2==0){
+            continue;
+        }console.log(n);
+        }
+        */
+
+        /*
+        建立函式-1:
+        Function 函式名稱 (參數名稱、列表){
+            函式內部的程式區塊
+        }
+            ＊參數名稱只能用在函式內部
+            ＊若為多個參數，可用逗號隔開“，”。
+        
+        建立函式-2:
+        let 函式名稱=function (參數名稱、列表){
+            函式內部的程式區塊
+        }
+
+        呼叫函式:
+        函式名稱 （參數資料、列表）;
+
+        */
+
+        /*
+        function test(){
+            console.log("Hello you")
+            console.log("Hello")
+        }
+
+        test();
+        */
+        /*    
+        function note(msg){
+            console.log(msg);
+        }
+
+        note();
+        note("Hey");
+        note(1450)
+        */
+        /*    
+        function divide(a, b){
+            let result = a/b;
+            console.log(result);
+        }
+
+        divide(100,4);
+        divide(15000, 10);
+
+        第二種建立函式寫法
+        let d = function (c,d){
+            let result2 = c/d;
+            console.log(result2);
+        }
+
+        d(200, 2);
+        */
+
+        // return 用來結束函示，傳回回傳值
+        
+        /*
+        function divide(a,b){
+            let result = a/b;
+            return result;
+        }
+        let dog=divide(200,2);
+        console.log(dog);
+        */
+
+         //何時使用return? 有很多種時機，其中一種是，當你想將函式結果再進行運算時，就可以寫return
+
+        //Object 
+        /*
+        let man= new Object() //建立空白物件
+        man.age=18
+        man.name="小沂"
+        man.talk=function(){
+            console.log("Talk to me:) 我是", this.name, "年齡", this.age,);
+        } //物件的方法中使用this, 代表物件
+
+        console.log(man.age>15)
+        console.log(man)
+        man.talk()
+        */
+
+        //使用JSON建立物件
+        /*
+        let man={
+            age:17, 
+            name:"YI", 
+            talk:function(){
+                console.log("Talk to me:) 我是", this.name, "年齡", this.age,);
+            }
+        };
+
+        console.log(man);
+        */
+
+        //Array
+        /* 建立陣列  
+        
+        let grades=[35, 22, 58]
+        grades.push(74);
+        grades.push(52);
+        grades.push(89);
+        grades.push(10);
+        console.log(grades);
+        
+        利用for迴圈，逐一取得陣列的資料
+    
+        for(let i=0; i<grades.length; i++){
+            console.log(i);
+        }
+        */
+
+        //Apply:算平均數>>>先算總和
+        /*
+        let total=0; //用來裝累加的結果
+        for(let i=0;i<grades.length;i++){
+            total=total+grades[i]
+        }
+        let avg=total/grades.length
+        console.log(avg);
+        */
+
+        //HTML DOM (Document object model)
+        /*認識document物件
+        console.log(window.document);
+        console.dir(document);
+        console.log(document.title); //取得網頁標題
+        document.title="認識document物件";//更改網頁標題
+        console.log(document.body.innerHTML);//取得標籤內文
+        document.body.innerHTML="hello html dom.";
+        */
+
+        /*操作步驟：
+          取得標籤物件->操作標籤物件
+          1.1 
+          取得標籤物件
+          在HTML想要操作的標籤加上id屬性
+          <div id="rabbit">內容</div>
+          <span id="turtle">內容</span>
+          
+          1.2 
+          Javascript中利用 document.querySelector(#id屬性) 取得標籤物件
+          <script>
+          let divElement = document.querySelector(#rabbit)
+          <'/script'>
+
+          2.1
+          操作標籤物件
+          divElement.innerHTML="哩賀"
+          divElement.className="kangaroo"
+          divElement.style.fontSize="20px"
+          divElement.style.color="red"
+        */
+       /*配合使用者點擊，點擊後才操作HTML標籤
+       
+       <div id="fish">在海裡游泳</div>
+       <button onclick = "change();"> <button>
+       <script>
+        function change(){
+        let divElem = document.querySelect(#fish)
+        divElem.innerHTML="游泳、游泳、游泳"
+        divElem.style.color="yellow"
+       <'/script'>     
+       
+       <div id="fish">在海裡游泳</div>
+       <button onclick = "change();"> cl3<button> //註冊事件處理函式
+    
+        function change(){
+        let divElem = document.querySelect(#fish) //取得標籤物件裝入divElem
+        divElem.innerHTML="游泳、游泳、游泳" //操作標籤物件
+        divElem.style.color="yellow"}
+        */
+
+        /*箭頭函式
+        Arrow function:
+
+        let 函式名稱=(參數1, 參數2)=>{
+            let result=n1+n2;
+            return reult;
+        };
+        
+        若函示本體中只有回傳值，即可簡化：
+        let 函式名稱=(參數1, 參數2)=>{
+            return n1+n2;
+        };
+
+        let 函式名稱=(參數1, 參數2)=>(n1+n2)
+
+        function calculate(){
+            let result=0;
+            let n=1;
+            while(n<=10){
+                result+=n;
+                n++;
+            }
+            console.log(result);
+        }
+        calculate(); */
+
+        /*使用參數(隨意字母或字 eg.num)讓函式有彈性, 呼叫函式時可以自己決定數字
+
+        function calculate(num){
+            let result=0;
+            let n=1;
+            while(n<=num){
+                result+=n;
+                n++;
+            }
+            console.log(result);
+        }
+        calculate(20); */
+
+        /*利用回傳值把結果傳送到函式外，將結果做更多處理
+        function calculate(num){
+            let result=0;
+            let n=1;
+            while(n<=num){
+                result+=n;
+                n++;
+            }
+            return result;
+        }
+        let calculate=(num)=>{
+            let result=0;
+            let n=1;
+            while(n<=num){
+                result+=n;
+                n++;
+            } 
+            return result;   
+        };
+
+        let a1=calculate(20);
+        let a2=calculate(35);
+        console.log(a1, a2);
+        */
+
+        /*箭頭函式
+        let multi=(n1, n2)=>{
+            return n1*n2;
+        };
+        */
+        /*以上函式的簡化
+        let multi=(n1, n2)=>(n1*n2);
+        let ans=multi(20000,20.50);
+        console.log(ans)
+        */
+
+
+        /*Destructuring Assignment 解構、賦值*/
+
+        /*陣列list*/
+
+        /*let jar=['red', 'yellow', 'blue'];
+        let [j1, j2, j3=4]=jar; 解構賦值合起來寫*/
+
+        /*解構賦值分開來寫
+        let j1, j2, j3, j4;
+        [j1, j2, j3, j4=5]=jar; 
+        
+        console.log(j1, j2, j3, j4);
+        */
+
+        /*變數資料交換
+        let n1=3;
+        let n2=7;
+
+        [n2, n1]=[n1, n2];
+        console.log(n1, n2);
+        */
+
+        /*物件Object*/
+        /*
+        let brekkie={x:3, y:9, z:21};
+
+    
+        let x=box.x;
+        let y= box.y;
+        let x, y, z;
+        ({x, y, z}=box);
+        */
+
+        //若想使用新的變數名稱而非x, y, z，可用以下方法：
+        /*
+        let juice, bread, milk;
+        ({x:juice, y:bread, z:milk=15}=brekkie);
+        console.log(juice, bread, milk);*/
+
+        /*統整函式的物件參數
+        function add(args){
+            console.log(args.n1+args.n2);
+        }
+        add({n1:3, n2:5})*/
+        
+        /*Rest Operator其餘運算符號 "...變數名" 一定要放在最後！
+
+        運用在陣列的解構賦值
+
+        let [n1, n2, ...data]=[3, 2, 1, 5, 4, 0];
+        console.log(n1, n2, data);
+        
+        運用在物件的解構賦值
+
+        let {x, y, ...coke}={x:3, y:2, z:6, a:4, b:1}
+        console.log(x, y, coke);
+
+        function add(n1, n2, ...fish){
+            console.log(n1, n2, fish);
+            let total = n1+n2;
+            for(i=0; i<fish.length; i++){
+                total=total+fish[i]
+            };
+            console.log(total);
+        };
+
+        add(3,6);
+        add(4,1,13,8);
+
+        */
+
+        /*切割模組*/
+        </script>
+
+    </body>
+    
+</html>
