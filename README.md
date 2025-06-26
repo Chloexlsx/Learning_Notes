@@ -1,2 +1,2 @@
-# Projects
-Learning memories
+# Notes
+Learning notes keep here
